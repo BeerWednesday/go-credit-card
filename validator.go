@@ -107,3 +107,7 @@ func isVisa(ccDigits digits) bool {
 func isAura(ccDigits digits) bool {
 	return ccDigits.At(2) == 50
 }
+
+func isMir(ccDigits digits) bool {
+	return matchesValue(ccDigits.At(4), []int{2200, 2201, 2202, 2203, 2204})
+}

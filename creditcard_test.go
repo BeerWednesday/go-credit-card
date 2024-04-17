@@ -465,6 +465,15 @@ func TestMethod(t *testing.T) {
 			So(card.Company.Short, ShouldEqual, "")
 			So(card.Company.Long, ShouldEqual, "")
 		})
+
+		Convey("Should work for Mir", func() {
+			card := Card{Number: "2201000000000001", Cvv: "111", Month: month, Year: year}
+			err := card.Method()
+
+			So(err, ShouldBeNil)
+			So(card.Company.Short, ShouldEqual, "mir")
+			So(card.Company.Long, ShouldEqual, "Mir")
+		})
 	})
 }
 

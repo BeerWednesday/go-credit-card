@@ -144,7 +144,6 @@ func (c *Card) ValidateCVV() error {
 // credit card with it's company / issuer attached to it
 func (c *Card) Method() error {
 	company, err := c.MethodValidate()
-
 	if err != nil {
 		return err
 	}
@@ -210,6 +209,8 @@ func (c *Card) MethodValidate() (Company, error) {
 		return Company{"visa", "Visa"}, nil
 	case isAura(ccDigits):
 		return Company{"aura", "Aura"}, nil
+	case isMir(ccDigits):
+		return Company{"mir", "Mir"}, nil
 	default:
 		return Company{"", ""}, errors.New("Unknown credit card method")
 	}

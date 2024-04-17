@@ -1,11 +1,11 @@
-module github.com/durango/go-credit-card
+module github.com/BeerWednesday/go-credit-card
 
-go 1.17
+go 1.22.1
 
-require github.com/smartystreets/goconvey v1.6.4
+require github.com/smartystreets/goconvey v1.8.1
 
 require (
-	github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1 // indirect
+	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/jtolds/gls v4.20.0+incompatible // indirect
-	github.com/smartystreets/assertions v0.0.0-20180927180507-b2de0cb4f26d // indirect
+	github.com/smarty/assertions v1.15.0 // indirect
 )
